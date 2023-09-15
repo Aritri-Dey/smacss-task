@@ -1,0 +1,42 @@
+@use './variables' as *;
+
+body,html,* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'BebasNeue';
+}
+
+body {
+  font-size: 1.05rem;
+  color: $font-color;
+}
+
+h1 {
+  color: $h1;
+  font-size: 5rem;
+}
+
+a {
+  text-decoration: none;
+  color: $font-color;
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.active {
+  color: $hover-color;
+}
+.flex-display {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.flex-box-width-33 {
+  width: 33.33%;
+  text-align: center;
+}
+
+
