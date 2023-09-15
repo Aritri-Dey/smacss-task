@@ -1,0 +1,174 @@
+@use '../base/variables' as *;
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1440px;
+  width: 100%;
+}
+
+.wrapper {
+  background: $body-color;
+  padding-top: 30px;
+  overflow: hidden;
+}
+
+.nav {
+  &__btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5rem;
+
+    &--btn1 {
+      padding: 12px;
+      width: 100%;
+      max-width: 120px;
+
+      &:hover {
+        border-radius: 25px;
+        background: $btn-color;
+
+        a {
+          color: white;
+        }
+      }
+    }
+
+    &--btn2 {
+      padding: 12px;
+      width: 100%;
+      max-width: 120px;
+      border-radius: 25px;
+      background: $btn-color;
+      text-align: center;
+
+      a {
+        color: white;
+      }
+
+      &:hover {
+        background: $h1;
+      }
+    }
+  }
+}
+
+.banner {
+  justify-content: space-between;
+  padding-top: 50px;
+
+  &__left {
+    &--top {
+      flex-direction: column;
+      row-gap: 20px;
+      margin-bottom: 2rem;
+
+      h4{
+        color: $btn-color;
+        position: relative;
+        margin-left: 120px;
+
+        &::before {
+          content: "";
+          width: 80px;
+          height: 3px;
+          background-color: $hover-color;
+          position: absolute;
+          top: 8px;
+          left: -120px;
+        }
+      }
+        
+    }
+
+    &--btn {
+      margin-bottom: 2rem;
+    }
+
+    &--list {
+      ul {
+        margin-top: 15px;
+        gap: 4rem;
+        li {
+          position: relative;
+
+          &::after {
+            content: "";
+            height: 8px;
+            width: 8px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: $hover-color;
+            top: 5px;
+            right: -35px;
+
+          }
+          &:last-child:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    img {
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+
+.footer {
+  margin-top: -45px;
+
+  &__container{
+    max-width: 1250px;
+    width: 100%;
+  }
+
+  .card {
+    &__item {
+      width: 25%;
+      background: white;
+      box-shadow: 5px 10px 10px 2px #888888;
+      padding: 30px 30px 50px 30px;
+      margin-right: 25px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+
+      h2{
+        color: $btn-color;
+      }
+
+      p {
+        position: relative;
+      }
+
+      p::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: $hover-color;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        background: $btn-color;
+        color: white;
+        h2 {
+          color: $hover-color;
+        }
+      }
+    }
+  }
+}
